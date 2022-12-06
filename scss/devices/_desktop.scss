@@ -1,0 +1,97 @@
+@media (min-width: 1000px) {
+    nav{
+        height: 5vh;
+        display: flex;
+        justify-content: space-between;
+        background-color: $darkBlue;
+        padding: 0% 2%;
+        border-bottom: 1px solid white;
+        div{
+            width: 20%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+        ul, li {
+            display: flex;
+            height: 100%;
+            align-items: center;
+        }
+        ul{
+            width: 60%;
+            height: 100%;
+            justify-content: space-evenly;
+            a:hover{
+                color: #9370DB;
+            }
+        }
+        li{
+            justify-content: center;
+            width: 100%;
+        }
+        a{
+            transition: .4s;
+            text-transform: uppercase;
+            text-align: center;
+            color: $defaultWhite;
+        }
+        a:hover{
+            text-decoration: underline;
+        }
+    }
+    main{
+        @include flexBoxColumn;
+        row-gap: 3vh;
+        section{
+            @include flexDir(row);
+            justify-content: space-between;
+            padding: 2% 2%;
+            align-items: center;
+            border-bottom: 1px solid white;
+        }
+    }
+    #about{
+        article{
+            // border: 1px solid white;
+
+        }
+    }
+    .secTitle{
+        width: 20%;
+        p{
+            text-align: center;
+            font-size: 60px;
+        }
+    }
+    .secContent{
+        @include flexDir(column);
+        row-gap: 3vh;
+        width: 70%;
+        p{
+            font-size: 18px;
+        }
+    }
+    .row{
+        @include flexDir(row);
+        justify-content: space-around;
+    }
+    .card{
+        border: 1px solid white;
+        border-radius: 10px;
+        width: 40%;
+        height: 50vh;
+        padding: 2%;
+        @include flexBoxColumn;
+        align-items: center;
+        justify-content: space-around;
+        img{
+            border: 1px solid red;
+            height: 70%;
+        }
+    }
+    .card-body{
+        @include flexBoxColumn;
+        align-items: center;
+    }
+
+}

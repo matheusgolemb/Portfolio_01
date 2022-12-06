@@ -1,0 +1,15 @@
+@mixin flexBoxColumn{
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin backPic ($url) {
+    background-image: url($url);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+@mixin flexDir ($direction) {
+    flex-direction: $direction;
+    display: flex;
+}
