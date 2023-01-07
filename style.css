@@ -8,7 +8,7 @@
     scroll-behavior: smooth;
     color: whitesmoke;
 }
-body{
+main{
     background-color: #09193e;
 }
 
@@ -90,18 +90,33 @@ main{
 }
 
 .imgCont{
-    display: none;  /* MUDAR DEPOIS SO P N ATRAPALHREM */
+    position: relative;
+    text-align: center;
+    color: white;
+    display: flex;  
+    /* MUDAR DEPOIS SO P N ATRAPALHREM */
     justify-content: center;
     align-items: center;
+    width: 60vh;
+    height: 60vh;
+    border-radius: 10px;
+}
+.backDiv{
+    width: 60vh;
+    height: 60vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+}
+
+#about img {
     width: 100%;
     height: 100%;
-    background-color: gray;
-}
-#about img {
+    position: absolute;
     border-radius: 10px;
     object-fit: cover;
     width: 60vh;
     height: 60vh;
+    opacity: 0.8;
 }
 
 /* END MAIN */
@@ -154,6 +169,7 @@ main{
 }
 /* END SKILLS */
 
+
 /* PROJECTS */
 .scene {
     width: 60vh;
@@ -186,30 +202,80 @@ main{
 }
 
 .card__face--front {
-    background: red;
+    /* background: red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 .card__face--back {
-    background: blue;
     transform: rotateY(180deg);
 }
-
+.inner_front{
+    /* background-color: wheat; */
+    background-image: url("./media/img/Registration_Form.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.inner_back{
+    /* background-color: wheat; */
+    background-image: url("./media/img/Registration_Form_List.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.innerOp{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    font-size: 20px;
+}
+.innerOp p {
+    padding-top: 5%;
+    font-size: 16px;
+    text-align: center;
+}
 .pjWrapper{
+    display: flex;
+    flex-direction: column;
+    row-gap: 15vh;
+}
+#projects > h2 {
+    padding-bottom: 3%;
+}
+.pjRow{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* border: 1px solid red; */
-}
-.pjWrapper article{
-    width: 40%;
-    /* border: 1px solid white; */
 }
 .pjDetails {
-    height: 40vh;
+    width: 55%;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    /* text-align: center; */
+    row-gap: 1vh;
 }
+.pjDetails h2{
+    padding-bottom: 3%;
+}
+.pjDetails p{
+    text-align: left;
+    width: 100%;
+}
+
 
 
 
