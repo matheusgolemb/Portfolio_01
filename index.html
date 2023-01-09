@@ -119,14 +119,22 @@
                 <!--- project ONE   --->
                 <div class="container-project">
                     <div class="container-img">
-                        <div class="container">
-                            <div class="slider">
-                              <div class="slider-item active"><img src="./media/img/WePost_profile.jpg" alt="" class="img-fluid"></div>
-                              <div class="slider-item"><img src="./media/img/WePost_newPost.jpg" alt="" class="img-fluid"></div>
-                              <div class="slider-item"><img src="./media/img/WePost_posts.jpg" alt="" class="img-fluid"></div>
-                              <ul id="dots" class="list-inline dots"></ul>
+                        <div class="slideshow-container">
+                            <div class="mySlides1">
+                              <img  src="./media/img/Registration_Form.png" style="width:100%">
                             </div>
-                      </div>
+                          
+                            <div class="mySlides1">
+                              <img  src="./media/img/Registration_Form_List.png" style="width:100%">
+                            </div>
+                          
+                            <div class="mySlides1">
+                              <img src="./media/img/Registration_Form_List.png" style="width:100%">
+                            </div>
+                          
+                            <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+                            <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+                          </div>
                     </div>
                     <div class="container-text">
                         <h4>Company employees</h4>
@@ -137,24 +145,31 @@
                             Technologies used: PHP | Bootstrap
                         </p>
                         <div class="btn-wrapper">
-                            <a href="" target="_blank" class="btn">
+                            <a href="https://github.com/matheusgolemb/RegisterForm_php" target="_blank" class="btn">
                                 <span>View project</span>
                             </a>
                         </div> 
                     </div> <!-- /.container-t-text -->
                 </div> <!-- /.container-project -->
-        
                 <!--- project TWO --->
                 <div class="container-project">
                     <div class="container-img">
-                        <div class="container">
-                            <div class="slider">
-                              <div class="slider-item active"><img src="./media/img/WePost_profile.jpg" alt="" class="img-fluid"></div>
-                              <div class="slider-item"><img src="./media/img/WePost_newPost.jpg" alt="" class="img-fluid"></div>
-                              <div class="slider-item"><img src="./media/img/WePost_posts.jpg" alt="" class="img-fluid"></div>
-                              <ul id="dots" class="list-inline dots"></ul>
+                        <div class="slideshow-container">
+                            <div class="mySlides2">
+                              <img src="./media/img/enc1.jpg" style="width:100%">
                             </div>
-                      </div>
+                          
+                            <div class="mySlides2">
+                              <img src="./media/img/dec1.jpg" style="width:100%">
+                            </div>
+                          
+                            <div class="mySlides2">
+                              <img src="./media/img/dec1.jpg" style="width:100%">
+                            </div>
+                          
+                            <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
+                            <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+                        </div>
                     </div>
                     <div class="container-text">
                         <h4>Vigenere cipher</h4>
@@ -177,18 +192,24 @@
                         </div> 
                     </div> <!-- /.container-t-text -->
                 </div> <!-- /.container-project -->
-        
-                <!--- project THREE --->
                 <div class="container-project">
                     <div class="container-img">
-                        <div class="container">
-                            <div class="slider">
-                              <div class="slider-item active"><img src="./media/img/WePost_profile.jpg" alt="" class="img-fluid"></div>
-                              <div class="slider-item"><img src="./media/img/WePost_newPost.jpg" alt="" class="img-fluid"></div>
-                              <div class="slider-item"><img src="./media/img/WePost_posts.jpg" alt="" class="img-fluid"></div>
-                              <ul id="dots" class="list-inline dots"></ul>
+                        <div class="slideshow-container">
+                            <div class="mySlides3">
+                              <img src="./media/img/WePost_posts.jpg" style="width:100%">
                             </div>
-                      </div>
+                          
+                            <div class="mySlides3">
+                              <img src="./media/img/WePost_profile.jpg" style="width:100%">
+                            </div>
+                          
+                            <div class="mySlides3">
+                              <img src="./media/img/WePost_profile.jpg" style="width:100%">
+                            </div>
+                          
+                            <a class="prev" onclick="plusSlides(-1, 2)">&#10094;</a>
+                            <a class="next" onclick="plusSlides(1, 2)">&#10095;</a>
+                        </div>
                     </div>
                     <div class="container-text">
                         <h4>WePost</h4>
@@ -205,7 +226,7 @@
                             Technologies used: PHP | Bootstrap | MySQL
                         </p>
                         <div class="btn-wrapper">
-                            <a href="" target="_blank" class="btn">
+                            <a href="https://github.com/gh-tyl/WePost" target="_blank" class="btn">
                                 <span>View project</span>
                             </a>
                         </div> 
@@ -339,29 +360,26 @@
 <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
 
 <script>
-    var slider = document.querySelectorAll(".slider")
-    console.log(slider)
-    slider.forEach((val, idx)=>{
-        var sliderItem = slider[idx].getElementsByTagName('div');
-        var dots = document.getElementById('dots');
-        var dotsChild = document.getElementById('dots').getElementsByTagName('li');
-        for (i = 0; i < sliderItem.length; i++) {
-          dots.appendChild(document.createElement('li'));
-          dotsChild[i].classList.add('list-inline-item');
-          dotsChild[i].setAttribute("id", i);
-          dotsChild[i].innerHTML = i;
-          dotsChild[0].classList.add('active');
-          dotsChild[i].addEventListener("click", runSlider);
-        }
-    })
-    function runSlider(){
-      var dnum = this.getAttribute("id");
-      for (i = 0; i < sliderItem.length; i++) {
-        sliderItem[i].classList.remove('active');
-        sliderItem[dnum].classList.add('active');
-        dotsChild[i].classList.remove('active');
-        dotsChild[dnum].classList.add('active');
-      }
-    }
+var slideIndex = [1,2];
+var slideId = ["mySlides1", "mySlides2", "mySlides3"]
+showSlides(1, 0);
+showSlides(1, 1);
+showSlides(1, 2);
+
+function plusSlides(n, no) {
+  showSlides(slideIndex[no] += n, no);
+  console.log([slideIndex[no]])
+}
+
+function showSlides(n, no) {
+  var i;
+  var x = document.getElementsByClassName(slideId[no]);
+  if (n > x.length) {slideIndex[no] = 2}    
+  if (n < 2) {slideIndex[no] = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex[no]-2].style.display = "block";  
+}
 </script>
 </html>
