@@ -1,0 +1,397 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+    font-weight: 400;
+}
+body{
+    color: whitesmoke;
+}
+main{
+    background-color: #09193e;
+}
+
+h2 {
+    font-size: 30px;
+}
+h4{
+    font-size: 26px;
+}
+h5{
+    font-size: 18px;
+}
+p {
+    font-size: 18px;
+}
+
+/* NAV */
+.navMenu{
+    background-color: #09193e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid white;
+}
+.navMenu ul {
+    display: flex;
+    width: 80%;
+    padding: 1%;
+    align-items: center;
+    justify-content: space-around;
+}
+.navMenu li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+.navMenu a {
+    height: 100%;
+    color: whitesmoke;
+    text-decoration: none 0.15em rgba(0, 0, 0, 1);
+    text-underline-offset: 0.2em;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    font-weight: 500;
+    display: inline-block;
+    width: 80px;
+    text-align: center;
+    transition: --offset 900ms, text-decoration-color 900ms;
+}
+
+.navMenu a:hover,
+.navMenu a:focus {
+    color: paleturquoise;
+    --offset: 0.4em;
+    text-decoration: underline 0.15em paleturquoise;
+}
+/* END NAV */
+
+/* MAIN */
+main{
+    display: flex;
+    flex-direction: column;
+}
+.secWrapper {
+    padding: 3% 8%;
+    justify-content: center;
+    border-bottom: 1px solid white;
+}
+
+#about{
+    display: flex;
+    justify-content: space-between;
+}
+#about article{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#about h1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    font-size: 60px;
+}
+
+.imgCont{
+    position: relative;
+    text-align: center;
+    color: white;
+    display: flex;  
+    justify-content: center;
+    align-items: center;
+    width: 60vh;
+    height: 60vh;
+    border-radius: 10px;
+}
+.backDiv{
+    width: 60vh;
+    height: 60vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    border-radius: 10px;
+}
+
+#about img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 10px;
+    object-fit: cover;
+    width: 60vh;
+    height: 60vh;
+}
+
+/* END MAIN */
+
+/* SKILLS */
+#skills {
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+    height: 70vh;
+}
+#skills article{
+    display: flex;
+    justify-content: space-between;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+    width: 45%;
+}
+.content .r{
+    display: flex;
+    gap: 5vh;
+}
+.lCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform .2s;
+    height: 20vh;
+    width: 20vh;
+}
+.lCard:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.lCard:hover i, .lCard:hover p {
+    color: paleturquoise;
+}
+.lCard i {
+    font-size: 60px;
+}
+.lCard i {
+    font-size: 60px;
+}
+.lCard p {
+    text-align: center;
+}
+/* END SKILLS */
+
+
+/* PROJECTS */
+section.project .container-project {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+section.project .container-project {
+    margin-bottom: 4.2rem;
+}
+section.project .container-img {
+    width: 40%;
+    padding-top: 30px;
+}
+section.project .container-text {
+    width: 45%;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2vh;
+}
+img {
+    display: block;
+    width: 100%;
+    min-width: 100%;
+    border-radius: 10px;
+    height: 50vh;
+}
+.btn {
+    border: 2px solid skyblue;
+    color: skyblue;
+    padding: 2% 3%;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: .4s;
+}
+.btn:hover{
+    background-color: whitesmoke;
+    color: navy;
+    border: 2px solid navy;
+
+}
+/* END PROJECTS */
+
+/* CONTACT */
+
+#contact .lCard i{
+    font-size: 40px;
+}
+#contact div{
+    display: flex;
+    justify-content: center;
+}
+#contact .r{
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+}
+/* END CONTACT */
+
+/* WORK */
+#education{
+    row-gap: 5vh;
+    display: flex;
+    flex-direction: column;
+}
+.work-wrap{
+    display: flex;
+    justify-content: space-between;
+}
+.work-cont{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    row-gap: 3vh;
+    /* border: 1px solid white; */
+}
+
+.work-text{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1vh;
+}
+.work-text p {
+    padding-top: 2%;
+}
+
+.logo-cont{
+    display: flex;
+    flex-direction: column;
+}
+.edu-wrap{
+    display: flex;
+    flex-direction: column;
+    row-gap: 5vh;
+}
+.edu-cont{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1vh;
+}
+
+.edu-text h5, .edu-cont h4{
+    font-weight: bold;
+}
+.lCard a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+.btn-wrapper{
+    padding-top: 5%;
+}
+.edu-wrap .btn{
+    padding: 1.5% 2%;
+}
+
+/* END WORK */
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+  }
+  
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+  }
+  
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  /* Caption text */
+  .text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+  
+.mySlides1, .mySlides2, .mySlides3 {
+    display: none;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@keyframes fade {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+  img {vertical-align: middle;}
+  
+  /* Slideshow container */
+  .slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+  }
+  
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a grey background color */
+  .prev:hover, .next:hover {
+    background-color: #f1f1f1;
+    color: black;
+  }
+
+
+

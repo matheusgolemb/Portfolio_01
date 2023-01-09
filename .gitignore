@@ -1,0 +1,11 @@
+# Ignore Mac system files
+.DS_store
+
+css/
+Readme.me
+
+# Ignore all text files
+*.txt
+
+# Ignore SASS config files
+.sass-cache
